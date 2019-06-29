@@ -1,17 +1,3 @@
-@font-face {
-  font-family: 'Avenir-Heavy';
-  src: url("Avenir-Heavy.woff2") format("woff2"), url("Avenir-Heavy.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Avenir-Medium';
-  src: url("../fonts/Avenir-Medium.woff2") format("woff2"), url("../fonts/Avenir-Medium.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -19,8 +5,52 @@
           box-sizing: border-box;
 }
 
-body {
-  background-color: #48c2c5;
+.preloader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #77b3d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10000;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+
+.preloader .airplane {
+  width: 250px;
+  -webkit-animation: airplane 1.5s ease-in-out infinite alternate;
+          animation: airplane 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes airplane {
+  from {
+    -webkit-transform: translateY(-25px) rotate(-2deg);
+            transform: translateY(-25px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform: translateY(25px) rotate(2deg);
+            transform: translateY(25px) rotate(2deg);
+  }
+}
+
+@keyframes airplane {
+  from {
+    -webkit-transform: translateY(-25px) rotate(-2deg);
+            transform: translateY(-25px) rotate(-2deg);
+  }
+  to {
+    -webkit-transform: translateY(25px) rotate(2deg);
+            transform: translateY(25px) rotate(2deg);
+  }
 }
 
 .container {
@@ -56,13 +86,12 @@ body {
   font-family: 'Avenir-Medium';
   font-size: 18px;
   color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
   padding: 0 10px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   padding: 5px 8px;
-  border-right: 1px solid #fff;
+  border-right: 1.5px solid #fff;
 }
 
 .navbar .menu a:hover {
@@ -103,6 +132,10 @@ body {
   z-index: -11;
 }
 
+footer {
+  background-color: #231f20;
+}
+
 #home-page .landing {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55))), url(../images/home-banner-parallax.jpg);
   background: linear-gradient(rgba(0, 0, 0, 0.55)), url(../images/home-banner-parallax.jpg);
@@ -112,6 +145,18 @@ body {
   background-size: cover;
   height: 100vh;
   position: relative;
+}
+
+#home-page .content {
+  padding: 60px 0;
+}
+
+#home-page .introduction {
+  background-color: #48c2c5;
+}
+
+#home-page .introduction p {
+  font-size: 18px;
 }
 
 @media screen and (max-width: 1170px) {
@@ -134,8 +179,10 @@ body {
     line-height: normal;
     -webkit-transition: 0.7s;
     transition: 0.7s;
+    z-index: 11;
   }
   .navbar .menu a {
+    border: none;
     display: block;
     padding: 20px;
     color: #fff;
@@ -148,5 +195,31 @@ body {
   .navbar #chk:checked ~ .menu {
     right: 0;
   }
+}
+
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url("../fonts/Avenir-Heavy.woff2") format("woff2"), url("../fonts/Avenir-Heavy.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url("../fonts/Avenir-Medium.woff2") format("woff2"), url("../fonts/Avenir-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #cdebef;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: 'Avenir-Heavy';
+}
+
+body p {
+  font-family: 'Avenir-Medium';
 }
 /*# sourceMappingURL=style.css.map */
