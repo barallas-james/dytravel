@@ -137,8 +137,8 @@ footer {
 }
 
 #home-page .landing {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55))), url(../images/home-banner-parallax.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.55)), url(../images/home-banner-parallax.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55))), url(../images/dytravel/home-banner-parallax.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.55)), url(../images/dytravel/home-banner-parallax.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
