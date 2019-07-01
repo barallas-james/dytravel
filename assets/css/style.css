@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -134,17 +138,121 @@
 
 footer {
   background-color: #231f20;
+  color: #fff;
+}
+
+footer .four.columns {
+  margin-top: 40px;
+}
+
+footer img {
+  max-width: 60%;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+footer a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+footer a:hover {
+  color: #000;
+  text-decoration: underline;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+footer h5 {
+  margin-bottom: 5px;
+}
+
+footer span {
+  font-size: 18px;
+}
+
+footer .social-links {
+  padding: 25px 0;
+  text-align: center;
+}
+
+footer .social-links a {
+  display: inline-block;
+}
+
+footer .social-links a i {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  margin: 0 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+footer .social-links a i:hover {
+  color: #000;
+  background-color: #fff;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+footer .social-links span {
+  margin-top: 20px;
+  display: block;
+}
+
+footer .social-links .copyright {
+  font-size: 14px;
 }
 
 #home-page .landing {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.55))), url(../images/dytravel/home-banner-parallax.jpg);
-  background: linear-gradient(rgba(0, 0, 0, 0.55)), url(../images/dytravel/home-banner-parallax.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8))), url(../images/dytravel/home-banner-parallax.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.8)), url(../images/dytravel/home-banner-parallax.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   position: relative;
+}
+
+#home-page .landing .box {
+  color: #fff;
+  text-align: center;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  /*x and y values*/
+  border-radius: 12px;
+  padding: 55px 2px;
+}
+
+#home-page .landing .box h2 {
+  font-size: 55px;
+}
+
+#home-page .landing .box h1 {
+  font-size: 100px;
+}
+
+#home-page .landing .box a {
+  border: 1px solid #fff;
+  padding: 12px 20px;
+  font-size: 25px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#home-page .landing .box a:hover {
+  color: #000;
+  background-color: #fff;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 #home-page .content {
@@ -171,14 +279,14 @@ footer {
     position: fixed;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.88);
+    background: rgba(0, 0, 0, 0.95);
     right: -100%;
     top: 0;
     text-align: center;
     padding: 80px 0;
     line-height: normal;
-    -webkit-transition: 0.7s;
-    transition: 0.7s;
+    -webkit-transition: 0.7s ease-in-out;
+    transition: 0.7s ease-in-out;
     z-index: 11;
   }
   .navbar .menu a {
@@ -194,6 +302,25 @@ footer {
   }
   .navbar #chk:checked ~ .menu {
     right: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #home-page .landing .box h2 {
+    font-size: 30px;
+  }
+  #home-page .landing .box h1 {
+    font-size: 60px;
+  }
+  #home-page .landing .box a {
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer .columns {
+    text-align: center;
   }
 }
 
@@ -219,7 +346,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: 'Avenir-Heavy';
 }
 
-body p {
+body p, body span, body a {
   font-family: 'Avenir-Medium';
 }
 /*# sourceMappingURL=style.css.map */
